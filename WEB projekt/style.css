@@ -1,0 +1,180 @@
+/* Resetiranje margina i paddinga za sve elemente */
+body, h1, h2, p, ul, li, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Opći stilovi za tijelo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Stilovi za banner */
+.banner {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    max-height: 300px;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Stilovi za navigaciju */
+nav {
+    background: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0;
+}
+
+.nav-linkovi {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-linkovi li {
+    margin: 0 1rem;
+}
+
+.nav-linkovi a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-linkovi a:hover {
+    color: #00ccff;
+    text-decoration: underline;
+}
+
+.nav-linkovi a.active {
+    color: #00ccff;
+    text-decoration: underline;
+}
+
+/* Stilovi za glavni sadržaj */
+main {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+h1, h2 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: #007BFF; /* Plava boja za glavni naslov */
+}
+
+h2 {
+    margin-top: 20px; /* Razmak iznad podnaslova */
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+figure {
+    margin: 0;
+}
+
+.mikrokontroler-slika {
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.text-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Stilovi za podnožje */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Medijske upite za responzivnost */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-linkovi {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-linkovi li {
+        margin: 0.5rem 0;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mikrokontroler-slika {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
