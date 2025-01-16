@@ -9,7 +9,7 @@ body, h1, h2, p, ul, li, img {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: white;
     color: #333;
     min-height: 100vh;
     display: flex;
@@ -34,7 +34,7 @@ body {
 
 /* Stilovi za navigaciju */
 nav {
-    background: #333;
+    background: #000000;
     color: white;
     padding: 0.5rem 1rem;
     margin: 0;
@@ -78,7 +78,7 @@ main {
 
 h1, h2 {
     font-weight: bold;
-    color: #333;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
@@ -115,32 +115,209 @@ figure {
 
 /* Stilovi za podnožje */
 footer {
-    background-color: #333;
+    background-color: #000000;
     color: white;
-    padding: 20px;
     text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
-
-.social-icons {
-    margin-top: 10px;
+article {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
 }
 
-.social-icon {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
-    transition: transform 0.3s;
+article figure {
+    margin-right: 20px;
+    flex-shrink: 0; /* Prevent the figure from shrinking */
 }
 
-.social-icon:hover {
-    transform: scale(1.2);
+article div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items at the start */
 }
+
+article h2 {
+    font-size: 1.2em;
+    color: #0066cc;
+    margin-bottom: 10px;
+    text-align: left; /* Ensure the heading is aligned to the left */
+}
+
+article img {
+    width: 150px; /* Increase the width of the image */
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+article p {
+    margin: 5px 0;
+    text-align: left; /* Ensure paragraphs are aligned to the left */
+}
+
+article .datum-objave {
+    font-size: 0.9em;
+    color: #555;
+    margin: 10px 0;
+    text-align: left; /* Ensure the date is aligned to the left */
+}
+
+article a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+/* CSS za news1 stranicu */
+
+.news1-content {
+    padding: 20px;
+    text-align: left; /* Osigurava da svi tekstualni elementi budu poravnati ulijevo */
+}
+
+.news1-content .images {
+    display: flex;
+    justify-content: flex-start; /* Poravnanje slika skroz ulijevo */
+    margin-bottom: 20px;
+}
+
+.news1-content .images img {
+    width: 23%; /* Četiri slike će zauzeti ukupno 92% širine s malim razmakom između */
+    height: auto;
+    border: 1px solid #ccc;
+    margin-right: 1%; /* Mali razmak između slika */
+}
+
+.news1-content .main-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.news1-content .subtitle {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.news1-content .paragraphs p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.news1-content .source {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #333;
+    text-align: left;
+}
+
+.news1-content .source a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.news1-content .source a:hover {
+    text-decoration: underline;
+}
+
+.news1-content .back-button {
+    margin-top: 20px;
+    text-align: left; /* Poravnanje gumba skroz ulijevo */
+}
+
+.news1-content .back-button .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #0066cc;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.news1-content .back-button .button:hover {
+    background-color: #004999;
+}
+form label {
+    color: black;
+    font-weight: bold;
+}
+
+form input[type="submit"], form input[type="reset"] {
+    background-color: black;
+    color: white;
+}
+.galerija-slike {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dva stupca */
+    gap: 20px; /* Razmak između slika */
+    justify-items: center; /* Centriranje slika unutar mreže */
+}
+
+figure.slika {
+    border: 1px solid black; /* Okvir oko svake slike i opisa */
+    padding: 10px; /* Unutarnji razmak unutar okvira */
+    text-align: center; /* Centriranje teksta */
+    background-color: #fff; /* Bijela pozadinska boja */
+    box-sizing: border-box; /* Uključuje padding i border u ukupnu veličinu */
+}
+
+figure.slika img {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer; /* Mijenja kursor na pokazivač */
+    max-width: 100%; /* Prilagođava širinu slike unutar figure */
+    height: auto; /* Održava omjer slike */
+}
+
+figure.slika img:hover {
+    border-color: #555; /* Mijenja boju okvira kada se prelazi preko slike */
+}
+
+figcaption {
+    margin-top: 5px;
+    text-align: center; /* Centriranje opisa */
+}
+
+
+
+
+
+#o-nama {
+    text-align: left;
+}
+
+#o-nama h1,
+#o-nama h2 {
+    text-align: left;
+    margin-left: 0;
+}
+
+#o-nama video {
+    float: left;
+    margin-right: 20px;
+}
+
+#o-nama p {
+    text-align: left;
+    margin-top: 0;
+}
+
+
+
+
+
 
 /* Medijske upite za responzivnost */
 @media (max-width: 768px) {
@@ -170,11 +347,17 @@ footer {
     }
 
     .footer-content {
+        flex-direction:column;
+    }
+    article {
         flex-direction: column;
+        align-items: center;
     }
 
-    .social-icon {
-        width: 25px;
-        height: 25px;
+    article figure {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
+
+    
 }

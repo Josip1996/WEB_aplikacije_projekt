@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="slike/mikrokontroler-removebg-preview.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dobrodošli na našu stranicu posvećenu mikrokontrolerima, gdje možete pronaći resurse, članke i projekte vezane uz Arduino, ESP32 i STM32.">
+    <meta name="author" content="Josip Vrdoljak">
+    <meta name="keywords" content="Arduino, ESP32, STM32, mikrokontroleri,embedded software ">
+    <title>WEB projekt</title>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="slike/banner.jpg" alt="Banner slika">
+
+        </div>
+        <nav>
+            <ul class="nav-linkovi">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="news.html">Novosti</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="about_us.html">O nama</a></li>
+                <li><a href="gallery.html">Galerija</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 >Kontakt</h1>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.835434509374!2d8.6160579153167!3d44.88310797975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e370a1f4b0b1b!2s15020%20Province%20of%20Alessandria%2C%20Italy!5e0!3m2!1sen!2sus!4v1613971441234!5m2!1sen!2sus"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <form action="submit_form.php" method="post" style="text-align: left;">
+            <label for="name" style="color: black; font-weight: bold;">Ime:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="lname" style="color: black; font-weight: bold;">Prezime:</label><br>
+            <input type="text" id="lname" name="lname" required><br><br>
+            <label for="email" style="color: black; font-weight: bold;">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message" style="color: black; font-weight: bold;">Poruka:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Pošalji" style="background-color: black; color: white;">
+            <input type="reset" value="Poništi" style="background-color: black; color: white;">
+        </form>
+    </main>
+    
+    <footer>
+        <p style="font-size: 20px;">Copyright &copy 2025 Josip Vrdoljak.
+            <a href="https://github.com/Josip1996/WEB_aplikacije_projekt.git">
+                <img src="slike/github-6980894_640.png" height="30px"
+                    alt="Github" class="github-slika">
+            </a>
+        </p>
+    </footer>
+    <script>
+        function initMap() {
+            var location = {lat: -34.397, lng: 150.644}; // Promijeni ovo na željenu adresu
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+    
+    
+    
+</body>
+</html>
